@@ -15,9 +15,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#6B1F26", // Burgundy
+                        primary: "#58111A", // Deep Royal Burgundy
                         secondary: "#6E675F", // Secondary text
-                        "background-light": "#F7F2EA", // Ivory
+                        gold: "#C5A059", // Metallic Gold
+                        "background-light": "#F4EFE6", // Warm Luxury Cream (Beige)
                         "background-dark": "#1a1817",
                         charcoal: "#2E2A28",
                     },
@@ -32,33 +33,33 @@
     </script>
     <style>
         .glass-card {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(107, 31, 38, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(88, 17, 26, 0.04);
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .dark .glass-card {
-            background: rgba(26, 24, 23, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(26, 24, 23, 0.45);
+            border: 1px solid rgba(197, 160, 89, 0.15);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
         }
         .glass-card:hover {
             transform: translateY(-4px);
-            border-color: #6B1F26;
-            box-shadow: 0 12px 40px 0 rgba(107, 31, 38, 0.1);
+            border-color: #C5A059;
+            box-shadow: 0 12px 40px 0 rgba(88, 17, 26, 0.08);
         }
         .highlight {
-            background-color: rgba(107, 31, 38, 0.15);
+            background-color: rgba(88, 17, 26, 0.15);
             font-weight: 600;
-            color: #6B1F26;
+            color: #58111A;
             padding: 0 2px;
             border-radius: 2px;
         }
         .dark .highlight {
-            background-color: rgba(215, 181, 142, 0.25);
-            color: #D7B58E;
+            background-color: rgba(197, 160, 89, 0.25);
+            color: #C5A059;
         }
         .reveal {
             opacity: 0;
