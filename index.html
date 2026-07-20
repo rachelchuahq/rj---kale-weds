@@ -97,7 +97,7 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 font-body antialiased overflow-x-hidden">
 <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4 flex justify-between items-center bg-transparent text-white" id="navbar">
-<div class="font-display text-xl tracking-widest font-semibold uppercase">R&amp;K</div>
+<div class="font-display text-xl tracking-widest font-semibold uppercase relative z-50">R&amp;K</div>
 <div class="hidden md:flex space-x-8 uppercase text-xs tracking-widest font-medium">
 <a class="hover:text-gold transition-colors" href="#details">Details</a>
 <a class="hover:text-gold transition-colors" href="#location">Location</a>
@@ -105,8 +105,27 @@
 <a class="hover:text-gold transition-colors" href="#entourage">Entourage</a>
 <a class="hover:text-gold transition-colors" href="seating.html">SEATS</a>
 </div>
-<a class="bg-primary text-background-light px-6 py-2 text-[10px] uppercase tracking-[0.2em] border border-white/25 hover:bg-white hover:text-primary transition-all duration-300 font-medium font-body" href="https://shorturl.at/pASSM" target="_blank">RSVP</a>
+<div class="flex items-center space-x-6">
+<a class="hidden md:inline-block bg-primary text-background-light px-6 py-2 text-[10px] uppercase tracking-[0.2em] border border-white/25 hover:bg-white hover:text-primary transition-all duration-300 font-medium font-body" href="https://shorturl.at/pASSM" target="_blank">RSVP</a>
+<!-- Mobile Menu Trigger -->
+<button id="mobile-menu-btn" class="md:hidden flex items-center focus:outline-none z-50 transition-colors" aria-label="Toggle Menu">
+<span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+</button>
+</div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#58111A]/98 z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
+<!-- Double gold lines border inside mobile menu for premium feel -->
+<div class="absolute inset-4 border border-gold/15 pointer-events-none"></div>
+
+<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#details">Details</a>
+<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#location">Location</a>
+<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#timeline">Timeline</a>
+<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#entourage">Entourage</a>
+<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="seating.html">SEATS</a>
+<a class="bg-gold text-primary px-8 py-3 text-xs uppercase tracking-[0.25em] font-medium font-body mt-6 shadow-md" href="https://shorturl.at/pASSM" target="_blank">RSVP Now</a>
+</div>
 <section class="relative min-h-screen pt-24 pb-16 flex items-center bg-primary text-white overflow-hidden">
 <!-- Elegant double gold corner accent lines on the whole hero block -->
 <div class="absolute inset-4 border border-gold/15 pointer-events-none"></div>
@@ -557,6 +576,34 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
             parallaxBgs.forEach(bg => {
                 let offset = window.pageYOffset;
                 // bg.style.backgroundPositionY = (offset * 0.5) + 'px';
+            });
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('pointer-events-none');
+            if (isOpen) {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuIcon.textContent = 'menu';
+                document.body.style.overflow = '';
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                menuIcon.textContent = 'close';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuIcon.textContent = 'menu';
+                document.body.style.overflow = '';
             });
         });
     </script>
