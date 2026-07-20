@@ -115,16 +115,16 @@
 </nav>
 
 <!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="fixed inset-0 bg-[#58111A]/98 z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
-<!-- Double gold lines border inside mobile menu for premium feel -->
-<div class="absolute inset-4 border border-gold/15 pointer-events-none"></div>
+<div id="mobile-menu" class="fixed inset-0 bg-[#F4EFE6]/98 z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-300 ease-in-out">
+<!-- Double burgundy lines border inside mobile menu for premium feel -->
+<div class="absolute inset-4 border border-primary/15 pointer-events-none"></div>
 
-<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#details">Details</a>
-<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#location">Location</a>
-<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#timeline">Timeline</a>
-<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#entourage">Entourage</a>
-<a class="mobile-nav-link text-white font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="seating.html">SEATS</a>
-<a class="bg-gold text-primary px-8 py-3 text-xs uppercase tracking-[0.25em] font-medium font-body mt-6 shadow-md" href="https://shorturl.at/pASSM" target="_blank">RSVP Now</a>
+<a class="mobile-nav-link text-primary font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#details">Details</a>
+<a class="mobile-nav-link text-primary font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#location">Location</a>
+<a class="mobile-nav-link text-primary font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#timeline">Timeline</a>
+<a class="mobile-nav-link text-primary font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="#entourage">Entourage</a>
+<a class="mobile-nav-link text-primary font-display text-2xl tracking-widest uppercase hover:text-gold transition-colors" href="seating.html">SEATS</a>
+<a class="bg-primary text-background-light px-8 py-3 text-xs uppercase tracking-[0.25em] font-medium font-body mt-6 shadow-md" href="https://shorturl.at/pASSM" target="_blank">RSVP Now</a>
 </div>
 <section class="relative min-h-screen pt-24 pb-16 flex items-center bg-primary text-white overflow-hidden">
 <!-- Elegant double gold corner accent lines on the whole hero block -->
@@ -587,14 +587,26 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 
         function toggleMenu() {
             const isOpen = !mobileMenu.classList.contains('pointer-events-none');
+            const nav = document.getElementById('navbar');
             if (isOpen) {
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
                 menuIcon.textContent = 'menu';
                 document.body.style.overflow = '';
+                // Restore navbar color based on scroll position
+                if (window.pageYOffset > 50) {
+                    nav.classList.add('text-charcoal');
+                    nav.classList.remove('text-primary');
+                } else {
+                    nav.classList.add('text-white');
+                    nav.classList.remove('text-primary');
+                }
             } else {
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
                 menuIcon.textContent = 'close';
                 document.body.style.overflow = 'hidden';
+                // Make navbar text primary burgundy when menu is open (over cream bg)
+                nav.classList.add('text-primary');
+                nav.classList.remove('text-white', 'text-charcoal');
             }
         }
 
