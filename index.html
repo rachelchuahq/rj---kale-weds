@@ -93,6 +93,24 @@
         .hover-playful:hover {
             transform: scale(1.05) rotate(2deg);
         }
+        .premium-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(88, 17, 26, 0.04);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .premium-card {
+            background: rgba(26, 24, 23, 0.45);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+        .premium-card:hover {
+            transform: translateY(-6px) scale(1.015);
+            border-color: #C5A059;
+            box-shadow: 0 20px 40px -10px rgba(88, 17, 26, 0.15);
+        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 font-body antialiased overflow-x-hidden">
@@ -103,6 +121,7 @@
 <a class="hover:text-gold transition-colors" href="#location">Location</a>
 <a class="hover:text-gold transition-colors" href="#timeline">Timeline</a>
 <a class="hover:text-gold transition-colors" href="#entourage">Entourage</a>
+<a class="hover:text-gold transition-colors" href="sponsors.html">Sponsors</a>
 <a class="hover:text-gold transition-colors" href="seating.html">SEATS</a>
 </div>
 <div class="flex items-center space-x-6">
@@ -123,6 +142,7 @@
 <a class="mobile-nav-link text-primary font-display text-3xl tracking-widest uppercase hover:text-gold transition-colors" href="#location">Location</a>
 <a class="mobile-nav-link text-primary font-display text-3xl tracking-widest uppercase hover:text-gold transition-colors" href="#timeline">Timeline</a>
 <a class="mobile-nav-link text-primary font-display text-3xl tracking-widest uppercase hover:text-gold transition-colors" href="#entourage">Entourage</a>
+<a class="mobile-nav-link text-primary font-display text-3xl tracking-widest uppercase hover:text-gold transition-colors" href="sponsors.html">Sponsors</a>
 <a class="mobile-nav-link text-primary font-display text-3xl tracking-widest uppercase hover:text-gold transition-colors" href="seating.html">SEATS</a>
 <a class="bg-primary text-background-light px-10 py-4 text-xs uppercase tracking-[0.25em] font-medium font-body mt-6 shadow-md" href="https://shorturl.at/pASSM" target="_blank">RSVP Now</a>
 </div>
@@ -241,22 +261,25 @@
 </div>
 
 <p class="text-secondary font-body font-normal italic mt-8 text-sm max-w-sm mx-auto">
-Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
+Ceremony starts at 2PM. Please arrive by 1PM to secure your seat.
 </p>
+<div class="mt-6">
+<a class="inline-block bg-primary text-background-light px-8 py-2.5 text-[10px] uppercase tracking-[0.2em] hover:bg-gold hover:text-primary transition-all duration-300 font-medium font-body border border-gold/20 shadow-sm" href="https://calendar.app.google/yPWvsgThht3BrmV16" target="_blank" rel="noopener noreferrer">Save the Date</a>
+</div>
 </div>
 </section>
 <section class="py-24 bg-background-light/50 dark:bg-background-dark/50" id="location">
 <div class="max-w-screen-xl mx-auto px-6">
 <h2 class="font-display font-semibold text-primary text-4xl md:text-6xl text-center mb-16 reveal">Where it all happens</h2>
 <div class="grid md:grid-cols-2 gap-12">
-<div class="reveal bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border border-gold/25 dark:border-gold/15 p-12 flex flex-col items-center text-center hover:border-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 shadow-md">
+<div class="reveal premium-card p-12 flex flex-col items-center text-center shadow-md">
 <span class="material-symbols-outlined text-primary mb-6 text-4xl">church</span>
 <h3 class="font-display font-semibold text-primary text-2xl mb-4">Ceremony</h3>
 <p class="font-semibold mb-2">Barasoain Church</p>
 <p class="text-sm text-secondary dark:text-gray-400 mb-8 leading-relaxed">Paseo del Congreso St, Malolos, Bulacan<br>Philippines</p>
 <a class="inline-block bg-primary text-background-light px-8 py-3 text-[10px] uppercase tracking-widest hover:opacity-90 transition-all font-medium font-body" href="https://maps.app.goo.gl/PKgen8eagoL3LjNd7" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
 </div>
-<div class="reveal reveal-delay-200 bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border border-gold/25 dark:border-gold/15 p-12 flex flex-col items-center text-center hover:border-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 shadow-md">
+<div class="reveal reveal-delay-200 premium-card p-12 flex flex-col items-center text-center shadow-md">
 <span class="material-symbols-outlined text-primary mb-6 text-4xl">celebration</span>
 <h3 class="font-display font-semibold text-primary text-2xl mb-4">Reception</h3>
 <p class="font-semibold mb-2">IRAL Pavilion Events Place</p>
@@ -279,9 +302,9 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 <div class="relative flex justify-center max-w-lg mx-auto mb-8 reveal">
 <!-- Left Side: Times -->
 <div class="w-1/2 text-right pr-8 space-y-16">
-<div class="h-16 flex items-center justify-end font-display text-2xl lg:text-3xl font-semibold text-gold">12:30 PM</div>
 <div class="h-16 flex items-center justify-end font-display text-2xl lg:text-3xl font-semibold text-gold">1:00 PM</div>
 <div class="h-16 flex items-center justify-end font-display text-2xl lg:text-3xl font-semibold text-gold">2:00 PM</div>
+<div class="h-16 flex items-center justify-end font-display text-2xl lg:text-3xl font-semibold text-gold">3:00 PM</div>
 <div class="h-16 flex items-center justify-end font-display text-2xl lg:text-3xl font-semibold text-gold">4:00 PM</div>
 </div>
 <!-- Center Divider Line -->
@@ -335,7 +358,7 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 <!-- Groomsmen & Bridesmaids side-by-side -->
 <div class="grid md:grid-cols-2 gap-12 mb-16 reveal reveal-delay-200">
 <!-- Groomsmen -->
-<div class="bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border border-gold/25 dark:border-gold/15 p-8 text-center hover:border-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 shadow-md">
+<div class="premium-card p-8 text-center shadow-md">
 <h3 class="text-primary font-display font-semibold text-xl mb-6 uppercase tracking-wider">Groomsmen</h3>
 <ul class="space-y-3 font-body text-charcoal/80 text-sm">
 <li>Mark Aquino</li>
@@ -350,7 +373,7 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 </div>
 
 <!-- Bridesmaids -->
-<div class="bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border border-gold/25 dark:border-gold/15 p-8 text-center hover:border-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 shadow-md">
+<div class="premium-card p-8 text-center shadow-md">
 <h3 class="text-primary font-display font-semibold text-xl mb-6 uppercase tracking-wider">Bridesmaids</h3>
 <ul class="space-y-3 font-body text-charcoal/80 text-sm">
 <li>Rhoshel Barnedo</li>
@@ -363,76 +386,39 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 <li>Phairiz Cruz</li>
 </ul>
 </div>
-</div>
 
-<!-- Secondary Sponsors -->
-<div class="bg-white/40 dark:bg-zinc-900/40 backdrop-blur-md border border-gold/25 dark:border-gold/15 p-8 mb-16 text-center hover:border-primary hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 shadow-md reveal reveal-delay-300">
-<h3 class="text-primary font-display font-semibold text-xl mb-8 uppercase tracking-wider">Secondary Sponsors</h3>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Candle -->
-<div>
-<p class="text-primary font-display font-semibold text-base mb-3 italic">Candle</p>
-<ul class="space-y-2 font-body text-charcoal/80 text-sm">
-<li>Renzo Tamondong</li>
-<li>Laila Aguilar</li>
-<li>Jomark Aquino</li>
-<li>May Ann Panganiban</li>
-</ul>
-</div>
-<!-- Veil -->
-<div>
-<p class="text-primary font-display font-semibold text-base mb-3 italic">Veil</p>
-<ul class="space-y-2 font-body text-charcoal/80 text-sm">
-<li>Raxneon Dale Villaflor</li>
-<li>Rachel Ann Chua</li>
-<li>Mark Anthony Fernandez</li>
-<li>Danavic Tan</li>
-</ul>
-</div>
-<!-- Cord -->
-<div>
-<p class="text-primary font-display font-semibold text-base mb-3 italic">Cord</p>
-<ul class="space-y-2 font-body text-charcoal/80 text-sm">
-<li>Jonas Barcel</li>
-<li>Friend Rima Cruz</li>
-<li>John Paulo Oledan</li>
-<li>Edli Ane June Ancheta</li>
-</ul>
-</div>
-</div>
-</div>
 
 <!-- Bearers & Flower Girls -->
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal reveal-delay-400">
 <div>
-<p class="text-primary font-display font-semibold text-base mb-2">Bible Bearer</p>
-<ul class="space-y-1 font-body text-charcoal/80 text-sm">
-<li>Zeke Fernandez</li>
-<li>Eirl Fajardo</li>
-</ul>
+<p class="text-primary font-display font-semibold text-lg mb-2">Bible Bearer</p>
+<div class="font-body text-charcoal/85 text-sm space-y-1">
+<p>Zeke Fernandez</p>
+<p>Eiri Fajardo</p>
+</div>
 </div>
 <div>
-<p class="text-primary font-display font-semibold text-base mb-2">Coin Bearer</p>
-<ul class="space-y-1 font-body text-charcoal/80 text-sm">
-<li>Gennadiy Velasquez</li>
-<li>Chloe Alessi Soriano</li>
-</ul>
+<p class="text-primary font-display font-semibold text-lg mb-2">Coin Bearer</p>
+<div class="font-body text-charcoal/85 text-sm space-y-1">
+<p>Gennadiy Velasquez</p>
+<p>Chloe Alessi Soriano</p>
+</div>
 </div>
 <div>
-<p class="text-primary font-display font-semibold text-base mb-2">Ring Bearer</p>
-<ul class="space-y-1 font-body text-charcoal/80 text-sm">
-<li>Makenzie Chua</li>
-<li>Alisha Rei Guinto</li>
-</ul>
+<p class="text-primary font-display font-semibold text-lg mb-2">Ring Bearer</p>
+<div class="font-body text-charcoal/85 text-sm space-y-1">
+<p>Makenzie Chua</p>
+<p>Alisha Rei Guinto</p>
+</div>
 </div>
 <div>
-<p class="text-primary font-display font-semibold text-base mb-2">Flower Girls</p>
-<ul class="space-y-1 font-body text-charcoal/80 text-sm">
-<li>Hebrew Glay Jaralbe</li>
-<li>Mary Leigh Cruz</li>
-<li>Harvey Jaralbe</li>
-<li>Ryen Rabiya Padilla</li>
-</ul>
+<p class="text-primary font-display font-semibold text-lg mb-2">Flower Girls</p>
+<div class="font-body text-charcoal/85 text-sm space-y-1">
+<p>Hebrew Glay Jaralbe</p>
+<p>Mary Leigh Cruz</p>
+<p>Harvey Jaralbe</p>
+<p>Ryen Rabiya Padilla</p>
+</div>
 </div>
 </div>
 
@@ -473,24 +459,20 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 </div>
 <div class="flex flex-wrap justify-center gap-12 md:gap-24 reveal reveal-delay-200 mb-16">
 <div class="flex flex-col items-center">
-<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#3D0A05] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
-<span class="uppercase tracking-widest text-[10px] font-medium">Dark Red</span>
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#3B0F19] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
+<span class="uppercase tracking-widest text-[10px] font-medium">Cabernet</span>
 </div>
 <div class="flex flex-col items-center">
-<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#A58570] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
-<span class="uppercase tracking-widest text-[10px] font-medium">Grey Beige</span>
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#721625] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
+<span class="uppercase tracking-widest text-[10px] font-medium">Merlot</span>
 </div>
 <div class="flex flex-col items-center">
-<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#7F1F0E] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
-<span class="uppercase tracking-widest text-[10px] font-medium">Ruby Red</span>
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#AA6C65] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
+<span class="uppercase tracking-widest text-[10px] font-medium">Dusty Rose</span>
 </div>
 <div class="flex flex-col items-center">
-<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#DAC1B1] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
-<span class="uppercase tracking-widest text-[10px] font-medium">Silk</span>
-</div>
-<div class="flex flex-col items-center">
-<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#AC746C] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
-<span class="uppercase tracking-widest text-[10px] font-medium">Indian Red</span>
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#F3C6C0] mb-4 border-2 border-white/10 ring-offset-4 ring-offset-charcoal ring-1 ring-white/20"></div>
+<span class="uppercase tracking-widest text-[10px] font-medium">Blush Pink</span>
 </div>
 </div>
 <div class="text-center reveal reveal-delay-300">

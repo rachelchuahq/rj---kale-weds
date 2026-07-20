@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>RJ & KALE | Sponsors</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Allura&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#58111A", // Deep Royal Burgundy
+                        secondary: "#6E675F", // Secondary text
+                        gold: "#C5A059", // Metallic Gold
+                        "background-light": "#F4EFE6", // Warm Luxury Cream (Beige)
+                        "background-dark": "#1a1817",
+                        charcoal: "#2E2A28",
+                    },
+                    fontFamily: {
+                        display: ["Libre Bodoni", "serif"],
+                        body: ["Inter", "sans-serif"],
+                        script: ["Allura", "cursive"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(88, 17, 26, 0.04);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .glass-card {
+            background: rgba(26, 24, 23, 0.45);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+        .glass-card:hover {
+            transform: translateY(-6px) scale(1.015);
+            border-color: #C5A059;
+            box-shadow: 0 20px 40px -10px rgba(88, 17, 26, 0.15);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 font-body antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="w-full px-6 py-6 flex justify-between items-center bg-transparent max-w-screen-xl mx-auto">
+        <a class="font-display text-xl tracking-widest font-semibold uppercase text-charcoal dark:text-gray-200 hover:text-primary transition-colors" href="index.html">R&K</a>
+        <a class="inline-flex items-center space-x-2 border border-charcoal/20 dark:border-white/20 px-6 py-2 text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-background-light hover:border-primary transition-all duration-300 font-medium" href="index.html">
+            <span class="material-symbols-outlined text-xs">arrow_back</span>
+            <span>Back</span>
+        </a>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="py-12 px-6 text-center max-w-3xl mx-auto flex-grow-0">
+        <h1 class="font-display font-bold text-4xl md:text-6xl text-primary mb-4 opacity-0 animate-[fadeInUp_1.2s_ease-out_forwards]">Our Sponsors</h1>
+        <p class="font-body text-secondary dark:text-gray-400 text-sm md:text-base leading-relaxed opacity-0 animate-[fadeInUp_1.2s_ease-out_0.2s_forwards] max-w-lg mx-auto">
+            With gratitude, we honor those who guide us with their wisdom, love, and support on our journey.
+        </p>
+    </header>
+
+    <!-- Sponsors List -->
+    <main class="flex-grow max-w-screen-xl mx-auto w-full px-6 pb-24 space-y-16">
+        
+        <!-- Principal Sponsors Section -->
+        <section class="reveal active">
+            <h2 class="font-display font-semibold text-primary text-2xl md:text-3xl text-center mb-8 border-b border-gold/20 pb-4">Principal Sponsors</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Ninang List -->
+                <div class="glass-card p-8 rounded-lg">
+                    <div class="flex items-center space-x-3 mb-6 border-b border-primary/10 pb-4">
+                        <h3 class="font-display font-semibold text-primary text-xl uppercase tracking-wider">Ninang</h3>
+                    </div>
+                    <ol class="space-y-4 text-base font-body text-charcoal/80 dark:text-gray-300 list-decimal pl-5">
+                        <li>Mrs. Leilanie C. Fajardo</li>
+                        <li>Mrs. Ma. Cristina Balutan</li>
+                        <li>Mrs. Johanna Ocampo</li>
+                        <li>Mrs. Lynnie Ann Damasco</li>
+                        <li>Mrs. Asuncion Vitug</li>
+                        <li>Mrs. Ruth Valenzuela</li>
+                        <li>Mrs. Val Villafania Marcaida</li>
+                    </ol>
+                </div>
+
+                <!-- Ninong List -->
+                <div class="glass-card p-8 rounded-lg">
+                    <div class="flex items-center space-x-3 mb-6 border-b border-primary/10 pb-4">
+                        <h3 class="font-display font-semibold text-primary text-xl uppercase tracking-wider">Ninong</h3>
+                    </div>
+                    <ol class="space-y-4 text-base font-body text-charcoal/80 dark:text-gray-300 list-decimal pl-5">
+                        <li>Mr. Marvic Juganas</li>
+                        <li>Mr. Eric Aquino</li>
+                        <li>Mr. Arvin Quintan</li>
+                        <li>Mr. Donever Sebua</li>
+                        <li>Mr. Mark Anthony Cruz</li>
+                        <li>Mr. Joenito Doñoz</li>
+                        <li>Kapt. Apollo Robles</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center text-xs text-secondary/60 border-t border-primary/5 mt-auto">
+        <p class="font-display tracking-widest font-semibold uppercase text-primary mb-2">RJ & KALE</p>
+        <p class="font-body">29.08.2026</p>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>
