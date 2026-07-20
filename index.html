@@ -34,10 +34,15 @@
     </script>
 <style>
         .parallax-bg {
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+        @media (min-width: 768px) {
+            .parallax-bg {
+                background-attachment: fixed;
+            }
         }
         .reveal {
             opacity: 0;
@@ -242,7 +247,7 @@ Ceremony starts at 1PM. Please arrive 30 minutes early to secure your seat.
 </div>
 </div>
 </section>
-<section class="h-[614px] overflow-hidden relative">
+<section class="h-[350px] md:h-[614px] overflow-hidden relative">
 <div class="absolute inset-0 parallax-bg" style="background-image: url('barasoain-church.jpg');"></div>
 </section>
 <section class="py-24 bg-[#58111A] text-white overflow-hidden relative" id="timeline">
